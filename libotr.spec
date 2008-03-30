@@ -8,11 +8,7 @@ Group:		Libraries
 Source0:	http://www.cypherpunks.ca/otr/%{name}-%{version}.tar.gz
 # Source0-md5:	6266a2966cc9e00822add3175b0b77cf
 URL:		http://www.cypherpunks.ca/otr/
-#BuildRequires:	-
-#Requires:	-
-#Requires(pre,post):	-
-#Requires(preun):	-
-#Requires(postun):	-
+BuildRequires:	libgcrypt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,20 +44,11 @@ Statyczna biblioteka OTR.
 %setup -q
 
 %build
-# if ac/am/lt/* rebuilding is necessary, do it in this order and add
-# appropriate BuildRequires
-#%{__libtoolize}
-#%{__aclocal}
-#%{__autoconf}
-#%{__autoheader}
-#%{__automake}
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
