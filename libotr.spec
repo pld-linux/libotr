@@ -13,7 +13,8 @@ BuildRequires:	libgpg-error-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is the portable OTR Messaging Library, as well as the toolkit to help you forge messages.
+This is the portable OTR Messaging Library, as well as the toolkit to
+help you forge messages.
 
 #%description -l pl.UTF-8
 
