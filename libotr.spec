@@ -9,6 +9,7 @@ Source0:	http://www.cypherpunks.ca/otr/%{name}-%{version}.tar.gz
 # Source0-md5:	6266a2966cc9e00822add3175b0b77cf
 URL:		http://www.cypherpunks.ca/otr/
 BuildRequires:	libgcrypt-devel
+BuildRequires:	libgpg-error-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
