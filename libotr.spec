@@ -1,12 +1,12 @@
 Summary:	Off-the-Record Messaging Library
 #Summary(pl.UTF-8):
 Name:		libotr
-Version:	3.1.0
+Version:	3.2.0
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://www.cypherpunks.ca/otr/%{name}-%{version}.tar.gz
-# Source0-md5:	6266a2966cc9e00822add3175b0b77cf
+# Source0-md5:	faba02e60f64e492838929be2272f839
 URL:		http://www.cypherpunks.ca/otr/
 BuildRequires:	libgcrypt-devel
 BuildRequires:	libgpg-error-devel
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/otr_*
-%attr(755,root,root) %{_libdir}/libotr.so.2.1.0
+%attr(755,root,root) %{_libdir}/libotr.so.2.2.0
 %attr(755,root,root) %ghost %{_libdir}/libotr.so.2
 %{_mandir}/man1/otr_*.1*
 
@@ -75,6 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libotr.la
 %{_includedir}/libotr
 %{_aclocaldir}/libotr.m4
+%{_pkgconfigdir}/libotr.pc
 
 %files static
 %defattr(644,root,root,755)
