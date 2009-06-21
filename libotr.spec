@@ -2,7 +2,7 @@ Summary:	Off-the-Record Messaging Library
 #Summary(pl.UTF-8):
 Name:		libotr
 Version:	3.2.0
-Release:	1
+Release:	2
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://www.cypherpunks.ca/otr/%{name}-%{version}.tar.gz
