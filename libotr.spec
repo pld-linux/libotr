@@ -1,28 +1,31 @@
 Summary:	Off-the-Record Messaging Library
-#Summary(pl.UTF-8):
+Summary(pl.UTF-8):	Biblioteka komunikacji OTR
 Name:		libotr
-Version:	3.2.0
-Release:	2
-License:	LGPL v2.1
+Version:	4.0.0
+Release:	1
+License:	LGPL v2.1 (library), GPL v2 (toolkit)
 Group:		Libraries
 Source0:	http://www.cypherpunks.ca/otr/%{name}-%{version}.tar.gz
-# Source0-md5:	faba02e60f64e492838929be2272f839
+# Source0-md5:	00979dca82d70383fcd1b01f3974363c
 URL:		http://www.cypherpunks.ca/otr/
-BuildRequires:	libgcrypt-devel
-BuildRequires:	libgpg-error-devel
+BuildRequires:	libgcrypt-devel >= 1.2.0
+Requires:	libgcrypt >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is the portable OTR Messaging Library, as well as the toolkit to
 help you forge messages.
 
-#%description -l pl.UTF-8
+%description -l pl.UTF-8
+libotr to przenośna biblioteka komunikacji OTR (Off-the-Record) oraz
+zestaw narzędzi pozwalających na fabrykowanie wiadomości.
 
 %package devel
 Summary:	Header files for OTR library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki OTR
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libgcrypt-devel >= 1.2.0
 
 %description devel
 Header files for OTR library.
@@ -63,10 +66,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS ChangeLog NEWS README UPGRADING Protocol-v3.html
 %attr(755,root,root) %{_bindir}/otr_*
-%attr(755,root,root) %{_libdir}/libotr.so.2.2.0
-%attr(755,root,root) %ghost %{_libdir}/libotr.so.2
+%attr(755,root,root) %{_libdir}/libotr.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libotr.so.5
 %{_mandir}/man1/otr_*.1*
 
 %files devel
