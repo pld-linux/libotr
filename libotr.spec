@@ -1,12 +1,12 @@
 Summary:	Off-the-Record Messaging Library
 Summary(pl.UTF-8):	Biblioteka komunikacji OTR
 Name:		libotr
-Version:	4.0.0
-Release:	3
+Version:	4.1.1
+Release:	1
 License:	LGPL v2.1 (library), GPL v2 (toolkit)
 Group:		Libraries
 Source0:	http://www.cypherpunks.ca/otr/%{name}-%{version}.tar.gz
-# Source0-md5:	00979dca82d70383fcd1b01f3974363c
+# Source0-md5:	dac5a8778a35f674c046ddf5d97e4d81
 URL:		http://www.cypherpunks.ca/otr/
 BuildRequires:	libgcrypt-devel >= 1.2.0
 Requires:	libgcrypt >= 1.2.0
